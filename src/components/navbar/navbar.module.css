@@ -1,0 +1,19 @@
+.notFound{
+width: auto;
+height: auto;
+margin-top: 2vh;
+}
+.imgNot{
+    height: 60vh;
+    border: 1px solid;
+}
+.contentNav{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+select{
+    margin: 5px;
+    border-radius: 10px;
+}

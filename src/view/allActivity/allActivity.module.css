@@ -1,0 +1,114 @@
+.contentActivity{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+/* .activity{
+    margin: 5px;
+    width: min-content;
+   min-width: 190px;
+   height: max-content;
+   background: linear-gradient(0deg, #ffffff 4%, #EE4E34 70%);
+
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.activity  p{
+    line-height: 1;
+    margin: 5px;
+}
+.activity  br{
+    line-height: 1;
+} */
+.back{
+    margin-top: -9px;
+    z-index: 0;
+    width: 100%;
+}
+.aref{
+    display: flex;
+    margin: 15px;
+    z-index: 2;
+}
+.myCard {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+  }
+/*   
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  } */
+  /*//////////*/
+  .scroll {
+    max-height: 40px; /* Altura máxima */
+    overflow-y: auto; /* Habilitar desplazamiento vertical */
+    border: 1px solid #ccc; /* Opcional: agregar un borde para delimitar el contenedor */
+    padding: 8px; /* Opcional: agregar relleno para espaciar el contenido del borde */
+    margin: 5px;
+  }
+  
+  .card {
+    width: 190px;
+    height: 254px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cardInner {
+    min-width: 190px;
+    max-width: min-content;
+    height: inherit;
+    background: rgba(255,255,255,.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .cardInner p {
+   margin: 0px;
+
+  }
+  .card:hover {
+    transform: rotate(2deg);
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e633, #53e);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(10px);
+    }
+  }

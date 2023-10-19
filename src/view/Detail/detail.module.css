@@ -1,0 +1,47 @@
+.imgFlag{
+    padding: 5px;
+    margin: 3px;
+    width: 95%;
+    max-width: 500px;
+    border: 1px solid;
+    border-radius: 15px;
+    box-shadow: 6px 3px 5px rgb(15, 15, 15, .5);
+
+}
+.detailCountry{
+   width: 65vw;
+
+}
+.contentDetail{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    width: 100%;
+    justify-content: space-around;
+    background-color: hsla(0, 0%, 100%, 0.09);
+}
+.detail  {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    line-height: 1;
+    margin-bottom: 120px;
+}
+.detail  p{
+    line-height: 1;
+    margin: 0;
+}
+.activity{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    
+}
+.activity p{
+    line-height: 2;
+}

@@ -1,0 +1,21 @@
+.min{
+  min-height: 73vh;
+}
+.notFound{
+  width: auto;
+  height: auto;
+  margin-top: 2vh;
+}
+.notFound > h1{
+  margin-bottom: 200px;
+}
+.imgNot{
+  height: 60vh;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 6px 3px 5px rgb(15, 15, 15, .5);
+}
+.select{
+  border-radius: 10px;
+  
+}

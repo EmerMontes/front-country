@@ -1,0 +1,23 @@
+.head{
+   
+    color: grey;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    max-height: 50px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+   
+}
+.logoLink{
+    height: 3em;
+    padding: 0;
+    will-change: filter;
+    transition: filter 300ms;
+    border-radius: 50%;
+}
+.logoLink:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}

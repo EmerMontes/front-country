@@ -1,0 +1,33 @@
+.contentCountry{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.countries{
+    border: 2px solid;
+    box-shadow: 6px 3px 5px rgb(15, 15, 15, .5);
+    border-radius: 10px;
+    margin: 10px;
+    width:  200px;
+    height: 250px;
+    background-color: rgb(218, 216, 216);
+    cursor: pointer;
+    transition: 400ms;
+}
+  
+.contentCountry .countries:hover {
+    transform: scale(1.1, 1.1);
+}
+  
+.contentCountry:hover > .countries:not(:hover) {
+    filter: blur(1px);
+    transform: scale(0.9, 0.9);
+}   
+
+.imgFlag{
+    border-radius: 10px 10px 0 0;
+    height: 130px;
+    width: 100%;
+} 
