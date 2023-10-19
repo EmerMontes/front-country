@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import style from './Landing.module.css'
+import {world} from './imagenes/world.gif'
 
 export const Landing = ()=>{
   const navigate = useNavigate()
@@ -8,7 +9,7 @@ export const Landing = ()=>{
       <div>
       <h1>Welcome</h1>
         <a href="/home" >
-          <img src={'./imagenes/world.gif'} className={style.logo} alt="Country logo" />
+          <img src={world} className={style.logo} alt="Country logo" />
         </a>
       </div>
       <p> This is a SPA based on countries api.<br/>
