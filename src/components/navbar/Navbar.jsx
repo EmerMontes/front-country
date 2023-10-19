@@ -22,7 +22,7 @@ export const NavBar = ()=>{
     }
     const handleFilter = (event)=>{
       if (event.target.value === 'All') {
-        dispatch(getCountry())
+         return dispatch(getCountry())
       }
       dispatch(getFilter(event.target.value))
     } 

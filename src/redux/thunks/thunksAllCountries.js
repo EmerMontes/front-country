@@ -2,10 +2,11 @@ import {setAllCountries, setFilter} from "../countrySlice"
 import axios from 'axios'
 
 
-const {data} =   await axios.get(`https://back-countries.up.railway.app/allCountries`)
-export const getAllCountry =()=>{
+
+export const getAllCountry = ()=>{
     return async (dispatch, getAllCountry)=>{
         try {
+            const {data} = await axios.get(`https://back-countries.up.railway.app/allCountries`)
             dispatch( setAllCountries({allCountries: data}))   
         } catch (error) {
             console.log('error')   
@@ -14,9 +15,13 @@ export const getAllCountry =()=>{
 }
 
 export const getFilter =(filter)=>{
-    let filtrados = [...data]
     return async (dispatch, getFilter)=>{
-
+        try {
+            const {data} =  await axios.get(`https://back-countries.up.railway.app/allCountries`)
+            let filtrados = [...data]
+            
+        
+        
               if (filter === 'Antarctica'|| 
                   filter === 'Asia'||
                   filter === 'Africa' ||
@@ -46,6 +51,9 @@ export const getFilter =(filter)=>{
                     filtrados = filtrados.sort((a, b) => a.population - b.population);
                 }
                 dispatch(setFilter({country: filtrados}))
+            } catch (error) {
+                console.log('Error')
+            }
         
     }
 }
