@@ -8,7 +8,7 @@ export const Landing = ()=>{
       <div>
       <h1>Welcome</h1>
         <a href="/home" >
-          <img src='https://c4.wallpaperflare.com/wallpaper/414/126/559/5bd334f8d938f-wallpaper-preview.jpg' className={style.logo} alt="Country logo" />
+          <img src='../../public/world.gif' className={style.logo} alt="Country logo" />
         </a>
       </div>
       <p> This is a SPA based on countries api.<br/>
