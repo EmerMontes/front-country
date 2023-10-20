@@ -49,7 +49,7 @@ export const Home =()=>{
               onLoad={()=>{setTimeout(() => {
                 setIsLoad(false);
               }, 1000);}} 
-              className={style.imgNot} src={'../../../imagenes/notFound.png'}  alt="city-notfound" /> 
+              className={style.imgNot} src={'./notFound.png'}  alt="city-notfound" /> 
             </div>
             : null
             }
