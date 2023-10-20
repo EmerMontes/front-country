@@ -17,7 +17,7 @@ function App() {
   return (
   <div className={isDarkMode? 'contentLigth':'contentDark'}>
     <Head/>
-    <HashRouter>
+    
    <Routes >
     <Route path='/' element={<Landing/>}/>
     <Route path='/home' element={<Home/>}/>
@@ -25,7 +25,7 @@ function App() {
     <Route path='/createActivity' element={<ActivityCreate/>}/>
     <Route path='/allActivity' element={<AllActivity/>}/>
    </Routes>
-    </HashRouter>
+    
    <Footer/>
    
   </div>)
