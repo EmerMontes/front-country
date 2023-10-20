@@ -10,7 +10,7 @@ export const Footer = ()=>{
 
         <div className={style.card}>
          <a href='https://www.linkedin.com/in/emerson-montes-422037262/' target='_blank'>
-         <img  src='../../imagenes/linkedin.gif' className={style.logoLink} alt="linkedin logo" />
+         <img  src='/linkedin.gif' className={style.logoLink} alt="linkedin logo" />
          </a>
        </div>
 
