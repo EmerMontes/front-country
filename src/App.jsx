@@ -17,7 +17,7 @@ function App() {
   return (
   <div className={isDarkMode? 'contentLigth':'contentDark'}>
     <Head/>
-   <Routes>
+   <Routes history={hashHistory}>
     <Route path='/' element={<Landing/>}/>
     <Route path='/home' element={<Home/>}/>
     <Route path='/detail/:ID' element={<Detail/>}/>
