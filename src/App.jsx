@@ -2,7 +2,7 @@ import { ActivityCreate } from './view/createActivity/ActivityCreate'
 import { AllActivity } from './view/allActivity/AllActivity'
 import { Footer } from './components/footer/Footer'
 import  {Landing}  from './view/Landing/Landing'
-import { HashRouter as Router, Route, Routes,  } from 'react-router-dom'
+import {  Route, Routes,  } from 'react-router-dom'
 import { Head } from './components/head/Head'
 import {Detail} from './view/Detail/Detail'
 import {Home} from './view/Home/Home'
@@ -18,7 +18,7 @@ function App() {
   return (
   <div className={isDarkMode? 'contentLigth':'contentDark'}>
     <Head/>
-    <Router>
+    
 
    <Routes >
   
@@ -29,7 +29,7 @@ function App() {
     <Route path='/allActivity' element={<AllActivity/>}/>
      
    </Routes>
-    </Router>
+    
    
    <Footer/>
    
