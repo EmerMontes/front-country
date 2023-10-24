@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {Back} from '../../components/backBottom/Back'
 import { useEffect, useState } from 'react'
 import {validate} from'./validateActivity'
+import Swal from 'sweetalert2'
 import style from './create.module.css'
 import axios from 'axios'
 //import Select from 'react-select'
@@ -75,25 +76,41 @@ export const ActivityCreate =()=>{
           setIdCountry([...idCountry, event.target.value]);
         }
       } 
+        //console.log(idCountry)
       const handleClick=()=>{
-        setActividad({...actividad,idCountry : idCountry})
+        setActividad({...actividad, idCountry : idCountry})
       }
       
       const handleSubmitActivity = async (event)=>{
-
+        
         event.preventDefault()
-
+        
         try {
           if (isEditing) {
-            await axios.put(`/activities/${activity.ID}`,actividad)
+            console.log(actividad)
+            console.log(isEditing)
+            await axios.put(`/activities/${activity.ID}`, actividad)
 
-            const result = window.confirm('Edited activity, please come back to create a new one ');
+           return Swal.fire({
+              title: 'Activity Edited',
+              text: "please come back to create a new one",
+              icon: 'success',
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'OK'
+            }).then((result) => {
+              if (result.isConfirmed) {
+                navigate('/home') 
+              }
+            })
 
-            if (result) {
-             return  navigate('/home') 
-             } else{
-              return  navigate('/home') 
-             }
+            // const result = confirm('Edited activity, please come back to create a new one ');
+
+            // if (result) {
+            //  return  navigate('/home') 
+            //  } else{
+            //   return  navigate('/home') 
+            //  }
           }else{
             await axios.post('/activities',actividad)
           }
@@ -101,16 +118,36 @@ export const ActivityCreate =()=>{
         }catch(error) {
             alert('no se puede crear la actividad')
         }
-          const result = window.confirm('activity created or edit, do you want to create a new activity?')
-          if(result){
+       return Swal.fire({
+          title: 'Activity Create',
+          text: "do you want to create a new activity?",
+          icon: 'success',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, I do'
+        }).then((result) => {
+          if (result.isConfirmed) {
             setActividad({name: '',duration: '',difficulty: '',season: ''})
             setIdCountry([])
             document.querySelectorAll('input[type="radio"]').forEach((radio) => {
               radio.checked = false;
             });
           }else{
-            navigate('/home') 
+            navigate('/home')
           }
+        })
+          // const result =
+          //  confirm('activity created or edit, do you want to create a new activity?')
+          // if(result){
+          //   setActividad({name: '',duration: '',difficulty: '',season: ''})
+          //   setIdCountry([])
+          //   document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+          //     radio.checked = false;
+          //   });
+          // }else{
+          //   navigate('/home') 
+          // }
         } 
   return (
         <div className={style.contentActividad}>

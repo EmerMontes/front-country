@@ -14,6 +14,7 @@ export const AllActivity = ()=>{
     useEffect ( ()=> {
         try{
           axios.get(`/activities`).then(({data})=>{
+            console.log(data)
             setAllActivity(data)
          })
         }catch(error){
@@ -55,6 +56,7 @@ export const AllActivity = ()=>{
        { allActivities.length < 1
        ? <h1>No activity,<br /> please create one</h1> 
        : allActivities.map(activity =>{
+         console.log(activity.Countries)
         return (
             <div key={activity.ID} className={style.card}>
                    <div className={style.circle}></div>
