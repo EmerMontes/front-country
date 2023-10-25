@@ -82,7 +82,7 @@ export const ActivityCreate =()=>{
       }
       
       const handleSubmitActivity = async (event)=>{
-        
+       // setActividad({...actividad, idCountry : idCountry})
         event.preventDefault()
         
         try {
@@ -225,7 +225,7 @@ export const ActivityCreate =()=>{
             <select  onChange={handleCountries}  value={idCountry} name='idCountry' multiple   className={style.selectt}>
                 {allCountries.map(countries=>{
                     return(
-                        <option key={countries.ID}
+                        <option  value={countries.name}key={countries.ID}
                         >{countries.name}</option>
                     ) 
                  })} 
