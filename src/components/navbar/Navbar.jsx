@@ -50,7 +50,7 @@ export const NavBar = ()=>{
             </select>
 
             <select onChange={handleFilter} name="activity" id="activity" defaultValue="">
-                <option value="" disabled> Filter by actividad</option>
+                <option value="" disabled> Filter by activity</option>
                 <option value="has activity">Has activity</option>
                 <option value="has not activity">Does not Have activity</option>
             </select>
