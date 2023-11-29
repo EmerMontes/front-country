@@ -6,7 +6,7 @@ import axios from 'axios'
 export const getAllCountry = ()=>{
     return async (dispatch, getAllCountry)=>{
         try {
-            const {data} = await axios.get(`https://back-countries.up.railway.app/allCountries`)
+            const {data} = await axios.get(`https://backcountries-nhfp.onrender.com/allCountries`)
             dispatch( setAllCountries({allCountries: data}))   
         } catch (error) {
             console.log('error')   
@@ -17,7 +17,7 @@ export const getAllCountry = ()=>{
 export const getFilter =(filter)=>{
     return async (dispatch, getFilter)=>{
         try {
-            const {data} =  await axios.get(`https://back-countries.up.railway.app/allCountries`)
+            const {data} =  await axios.get(`https://backcountries-nhfp.onrender.com/allCountries`)
             let filtrados = [...data]
             
         

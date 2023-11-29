@@ -8,7 +8,7 @@ import store from './redux/store'
 import axios from 'axios'
 
 
-axios.defaults.baseURL = 'https://back-countries.up.railway.app'
+axios.defaults.baseURL = 'https://backcountries-nhfp.onrender.com'
 //axios.defaults.baseURL = 'http://localhost:3001'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
